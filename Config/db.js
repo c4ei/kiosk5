@@ -1,5 +1,7 @@
 // Database Config
 const mysql = require('mysql');
+const dotenv = require('dotenv');
+dotenv.config();
 
 // Function ในการสร้าง return การเชื่อมต่อฐานข้อมูล
 const connectDB = () => {
@@ -8,7 +10,7 @@ const connectDB = () => {
         host: 'localhost', // ตั้งค่าโฮสต์ฐานข้อมูลเป็น localhost
         user: 'root', // ตั้งค่าผู้ใช้ฐานข้อมูลเป็น root
         password: 'root', // ตั้งค่ารหัสผ่านของผู้ใช้ฐานข้อมูล
-        database: 'point_of_sale_management_system', // ชื่อฐานข้อมูลที่ต้องการเชื่อมต่อ
+        database: 'pos', // ชื่อฐานข้อมูลที่ต้องการเชื่อมต่อ
         connectTimeout: 10000, // ระยะเวลารอในการเชื่อมต่อ (10 วินาที)
         acquireTimeout: 10000, // ระยะเวลารอให้เชื่อมต่อสำเร็จ (10 วินาที)
         timeout: 60000, // ระยะเวลารอการเชื่อมต่อครั้งเดียว (60 วินาที)
